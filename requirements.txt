@@ -1,3 +1,4 @@
 rstr
 python-telegram-bot
 schedule
+colorama
