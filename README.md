@@ -9,7 +9,7 @@
 > Telegram channel : `@yourchannel`
 
 ## ❗️ NOTE
-> **After you build the robot using `@botfather`, make that robot on the admin channel and access it to send the message and send /start in your Telegram Bot.**
+> **After you build the robot using `@botfather`, make that robot on the admin channel and access it to send the message and send `/start` in your Telegram Bot.**
 ## ⚠️ DISCLAIMER 
 **This github repo is for EDUCATIONAL PURPOSES ONLY. I am NOT under any responsibility if a problem occurs.**
 ## ☎️ CONTACT ME
