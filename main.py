@@ -6,12 +6,13 @@ import time
 from rstr import xeger
 from datetime import datetime
 from colorama import Fore, init
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 # Initialize colorama
 init(autoreset=True)
 
 # =========================================================================================
-# === Telegram Bot Information - Fill this section with your credentials ================
+# === Telegram Bot Information - Fill this section with your credentials =========================
 # =========================================================================================
 TELEGRAM_BOT_TOKEN = "YOUR_BOT_TOKEN"
 TELEGRAM_CHANNEL_ID = "@YOUR_CHANNEL_USERNAME"
@@ -31,21 +32,34 @@ class AvastKeyGenerator:
         return [xeger(self.key_pattern) for _ in range(self.keys_per_run)]
 
     async def send_to_telegram(self, keys):
-        """Formats and sends the keys to the Telegram channel, each in a separate quote."""
+        """Formats and sends the keys to the Telegram channel with download buttons."""
         if not keys:
             print("No keys generated to send.")
             return
 
-        # Format the message to have each key in a separate blockquote
         keys_formatted = "\n".join(f"> `{key}`" for key in keys)
         message = f"Avast secureline vpn codes:\n\n{keys_formatted}"
+
+        # Create inline keyboard buttons with the new order
+        keyboard = [
+            [
+                InlineKeyboardButton("Android", url="https://play.google.com/store/apps/details?id=com.avast.android.vpn"),
+                InlineKeyboardButton("iOS", url="https://apps.apple.com/app/avast-secureline-vpn-proxy/id793096595")
+            ],
+            [
+                InlineKeyboardButton("Windows PC", url="https://www.avast.com/secureline-vpn#pc"),
+                InlineKeyboardButton("macOS", url="https://www.avast.com/secureline-vpn#mac")
+            ]
+        ]
+        reply_markup = InlineKeyboardMarkup(keyboard)
 
         try:
             bot = telegram.Bot(token=TELEGRAM_BOT_TOKEN)
             await bot.send_message(
                 chat_id=TELEGRAM_CHANNEL_ID,
                 text=message,
-                parse_mode='MarkdownV2'
+                parse_mode='MarkdownV2',
+                reply_markup=reply_markup
             )
             print(f"[{datetime.now()}] Successfully sent {len(keys)} keys to Telegram.")
         except Exception as e:
@@ -63,7 +77,6 @@ async def job():
 
 def main():
     """Schedules and runs the job."""
-    # Display the startup message
     print(Fore.LIGHTCYAN_EX + "made with ❤️ by @mehdiasmart")
     
     print("Script started. Scheduling the job every 8 hours.")
