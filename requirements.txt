@@ -1,4 +1,3 @@
 rstr
-datetime
-colorama
-pystyle
+python-telegram-bot
+schedule
