@@ -1,8 +1,11 @@
-# 🔑 Avast-Key-Generator
-> Avast License Key Generator with Special Regex Pattern.
-
-## ✨ Causion
-- ***_We tried the generated Keys from this tool, It's worked perfectly. That's why We're saying Special Regex Pattern._***
+# 🔑 Avast-Key-Generator-Telegram-Bot
+> This bot generates key every 8 hours and sent it in telegram channel.
+> you should change 16 and 17 and 81 lines with your bot API and your channel Telegram ID.
+> example:
+> 12345678:yourapiyourapiyourapiyourapi
+> @yourchannel
 
 ## ⚠️ DISCLAIMER 
 **This github repo is for EDUCATIONAL PURPOSES ONLY. I am NOT under any responsibility if a problem occurs.**
+## ☎️ CONTACT ME
+**If you have any problem with this code; please report to this telegram id: `@mehdiasmart`**
