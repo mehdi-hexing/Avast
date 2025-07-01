@@ -14,7 +14,7 @@
 ## ▶️ RUN
 > **Open your server and upload the code and requirements file and Enter This commands in your directory:**
 >
-> ## ❗️ NOTE
+## ❗️ NOTE
 > **`Be sure to create a directory inside the server and run those files inside.`**
 > 
 > **`screen -S (optional_name)`**
