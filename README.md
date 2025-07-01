@@ -3,8 +3,10 @@
 > you should change 16 and 17 and 81 lines with your bot API and your channel Telegram ID.
 > 
 > example:
-> Bot API :12345678:yourapiyourapiyourapiyourapi
-> Telegram channel :@yourchannel
+> 
+> Bot API : `12345678:yourapiyourapiyourapiyourapi`
+> 
+> Telegram channel : `@yourchannel`
 
 ## ⚠️ DISCLAIMER 
 **This github repo is for EDUCATIONAL PURPOSES ONLY. I am NOT under any responsibility if a problem occurs.**
